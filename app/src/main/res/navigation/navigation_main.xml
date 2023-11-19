@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_auth"
+    app:startDestination="@id/authFragmentContainer">
+
+    <fragment
+        android:id="@+id/authFragmentContainer"
+        android:name="com.thebaoba.baoba.auth.AuthFragment"
+        android:label="AuthFragment"
+        tools:layout="@layout/fragment_auth">
+
+        <deepLink
+            android:id="@+id/authDeepLink"
+            app:uri="baoba://auth" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragmentContainer"
+        android:name="com.thebaoba.baoba.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <deepLink
+            android:id="@+id/homeDeepLink"
+            app:uri="baoba://home" />
+    </fragment>
+</navigation>
